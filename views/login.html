@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KickEV | Log in</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition login-page">
+  <div class="login-box">
+  
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+      <div class="login-logo">
+          <!-- <a href="#"><b>I</b>MART</a> -->
+          <img src="/admin/img/logo-color-1x.png">
+        </div>
+  
+      <form onsubmit="return false" id="formLogin" >
+        <div class="form-group has-feedback">
+            <label style="color:red">Proceed to continue please log in first</label>
+          <input type="text" class="form-control" placeholder="Email" id="userId">
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input type="password" class="form-control" placeholder="Password" id="password">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="checkbox icheck">
+              <!-- <label>
+                <input type="checkbox"> Remember Me
+              </label> -->
+            </div>
+          </div>
+          <!-- /.col -->
+          <div style="align:center; padding-left:140px; padding-right:140px;">
+            <button type="submit" class="btn btn-primary btn-block btn-flat" id="loginBtn">Log In</button>
+          </div>
+  
+          <div class="text-center margin-top-5">
+              <br>
+              <strong>Powered by <b style="color:blue">KickEV ®</b></strong>. All rights reserved.
+    
+    
+          <!-- <div class="clearfix margin-top-10"></div>
+          <img style="width: 80%;" src="https://hubco-app.s3.ap-south-1.amazonaws.com/hubco-soft-security-2.png" alt="Hubco soft security 2"> -->
+        </div>
+          <!-- /.col -->
+        </div>
+      </form>
+  
+  
+      <form onsubmit="return false" id="formResetPassword" style="display: none;">
+        <div class="form-group has-feedback">
+            <label style="color:red">Need to reset your password !</label>
+            <input type="password" class="form-control" placeholder="Password" id="password-confirm">
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input type="password" class="form-control" placeholder="Confirm Password" id="password-reconfirm">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="checkbox icheck">
+              <!-- <label>
+                <input type="checkbox"> Remember Me
+              </label> -->
+            </div>
+          </div>
+          <!-- /.col -->
+          <div style="align:center; padding-left:140px; padding-right:140px;">
+            <button type="submit" class="btn btn-primary btn-block btn-flat" id="verifyPassBtn">Verify Password</button>
+          </div>
+  
+          <div class="text-center margin-top-5">
+              <br>
+              <strong>Powered by <b style="color:blue">Speedix@Nimit ®</b></strong>. All rights reserved.
+    
+    
+          <!-- <div class="clearfix margin-top-10"></div>
+          <img style="width: 80%;" src="https://hubco-app.s3.ap-south-1.amazonaws.com/hubco-soft-security-2.png" alt="Hubco soft security 2"> -->
+        </div>
+          <!-- /.col -->
+        </div>
+      </form>
+  
+      <!-- <div class="social-auth-links text-center">
+        <p>- OR -</p>
+        <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
+          Facebook</a>
+        <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
+          Google+</a>
+      </div> -->
+      <!-- /.social-auth-links -->
+  
+      <!-- <a href="#">I forgot my password</a><br>
+      <a href="register.html" class="text-center">Register a new membership</a> -->
+  
+    </div>
+    <!-- /.login-box-body -->
+  </div>
+<!-- /.login-box -->
+
+<!-- jQuery -->
+<script src="/admin/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/admin/dist/js/adminlte.min.js"></script>
+<script src="/admin/custom/login.js"></script>
+
+</body>
+</html>

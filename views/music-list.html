@@ -1,0 +1,207 @@
+<%- include('header.html'); -%>
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item active">Musics</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container-fluid">
+                
+                <div class="row">
+                    <div class="col-12">
+                      <div class="card">
+                        <div class="card-header">
+                          <h3 class="card-title">Music List</h3>
+          
+                          <div class="card-tools">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+           
+                                Sort By
+                                <select id="sortSelect">
+                                    <option value="0" >None</option>
+                                    <option value="1">Category</option>
+                                    <option value="2">Genre</option>
+                                </select>
+                               
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0">
+                          <table class="table table-hover text-nowrap">
+                            <thead>
+                              <tr>
+                                <th>#ID</th>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Artist</th>
+                                <th>Genre</th>
+                                <th>Edit</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody id="listOfMusic"></tbody>
+                          </table>
+                        </div>
+                        <!-- /.card-body -->
+                      </div>
+                      <!-- /.card -->
+                    </div>
+                  </div>
+
+                  
+                  <div class="modal" id="music-detail-edit" aria-modal="true" style="padding-right: 17px; ">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Edit Details</h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="card-body" >
+
+                            <form class="form-horizontal" onsubmit="return false">
+                                <div class="card-body">
+
+
+ 
+                                    <div class="form-group row">
+                                        <label for="colorName" class="col-sm-2 col-form-label">Music Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="name"
+                                                placeholder="Enter Music Name">
+                                        </div>
+                                    </div>
+
+                                   
+
+                                    <div class="form-group row">
+                                        <label for="colorName" class="col-sm-2 col-form-label">Music Category</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="category"
+                                                placeholder="Enter Category Name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="colorName" class="col-sm-2 col-form-label">Music Artist</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="artist"
+                                                placeholder="Enter Artist Name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="colorName" class="col-sm-2 col-form-label">Music Genre</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="genre"
+                                                placeholder="Enter Genre Name">
+                                        </div>
+                                    </div>
+
+                                    
+ 
+
+
+                                </div>
+
+
+                            </form>
+
+
+                          </div>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" id="btnUpdateMusic">Update &amp; Saved</button>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                  </div>
+
+
+                  <div class="modal" id="music-audio-edit" aria-modal="true" style="padding-right: 17px; ">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Edit Audio</h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="card-body" >
+
+                            <form class="form-horizontal" onsubmit="return false">
+                                <div class="card-body">
+
+
+                                    <div class="form-group row">
+                                        <label for="music_path" class="col-sm-2 col-form-label">Pick Music</label>
+                                         
+                                        <div class="col-sm-10">
+                                            <div class="custom-file">
+                                                <input type="file" accept=".mp3" class="custom-file-input" id="music_path">
+                                                <label class="custom-file-label" for="music_path">Choose Music File</label>
+                                              </div>
+                                              
+                                        </div>
+
+                                         
+                                    </div>
+ 
+
+
+                                </div>
+
+
+                            </form>
+
+
+                          </div>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" id="btnUpdateMusicAudio">Update &amp; Saved</button>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                  </div>
+
+          
+
+            </div>
+
+          
+
+        </section>
+
+        
+
+    </div>
+    <!-- /.content-wrapper -->
+
+    <% jsLink='music-list.js' %>    
+    <%- include('footer.html'); -%>
