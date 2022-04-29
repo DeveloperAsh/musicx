@@ -4,7 +4,7 @@ module.exports = function(mysql) {
         connectionLimit: 1000, //important
         host: 'localhost',
         user: 'root',
-        password: '',
+        password: 'Ashish@123',
         database: 'musicx',
         debug: false,
         multipleStatements: true
