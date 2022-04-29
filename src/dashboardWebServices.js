@@ -310,7 +310,7 @@ module.exports = function (app, query, multer, moment, uniqid, fs) {
                 skip = data.skip;
             }
             var getMusicList = function () {
-                query.query(`SELECT  id , name , category , artist , genre , DATE_FORMAT(created_date, "%d-%c-%y %r") as created_date , CONCAT("./music?id=",music_path) as music_path FROM music_master WHERE is_deleted=0 ORDER BY id DESC LIMIT 2 OFFSET ` + skip, function (result) {
+                query.query(`SELECT  id , name , category , artist , genre , DATE_FORMAT(created_date, "%d-%c-%y %r") as created_date , CONCAT("./music?id=",music_path) as music_path FROM music_master WHERE is_deleted=0 ORDER BY id DESC LIMIT 5 OFFSET ` + skip, function (result) {
 
                     if (result.isSuccess) {
                         response.isSuccess = true;

@@ -200,6 +200,7 @@ function loadMusic() {
                      <td>${responseData[i].category}</td>
                      <td>${responseData[i].artist}</td>
                      <td>${responseData[i].genre}</td>
+                     <td>${responseData[i].created_date}</td>
                      <td><a href="#" id="editMusic" 
                      data-id="${responseData[i].id}"
                      data-name="${responseData[i].name}"
@@ -217,7 +218,8 @@ function loadMusic() {
 
                      </td>
                      <td><a data-id="${responseData[i].id}" id="deletedBtn" ><span class="right badge badge-danger">Delete</span></a></td>
-                    `;
+                    
+                     `;
 
 
                 }
@@ -225,6 +227,11 @@ function loadMusic() {
                 jQuery("#loaderGifTD").remove();
                 jQuery("#loadMoreTD").remove();
                 $('#listOfMusic:last-child').append(htmlText);
+
+                if(responseData.length == 0)
+                {
+                    jQuery("#loadMoreTD").remove();
+                }
 
             } else {
                 alert("" + res.message);

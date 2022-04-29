@@ -52,7 +52,7 @@ $(document).ready(function () {
                 "success": function (resp) {
                     var data = JSON.parse(resp);
                     if (data.isSuccess) {
-                        window.location.reload();
+                        window.location.replace(`music-list`);     
                     }
                     else {
                         console.log("" + data.message);

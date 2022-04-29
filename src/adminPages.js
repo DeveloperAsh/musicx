@@ -77,14 +77,10 @@ module.exports = function (app, query) {
         })
     }
 
-    app.get("/admin", checkSignIn, function (req, res) {
-        var responseData = {};
-        responseData['dashboard'] = res.dashboard;
-        responseData['title'] = res.title;
-        responseData['subTitle'] = res.subTitle;
-        responseData['response'] = [];
-
-        res.render('index', { "responseData": responseData });    
+    
+    app.get("/", checkSignIn, function (req, res) {
+         
+        res.redirect("/music-list");
         
     });
 
